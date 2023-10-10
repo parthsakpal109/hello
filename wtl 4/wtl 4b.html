@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Array</title>
+</head>
+<body>
+    <script>
+        var colors = ["Red", "Green", "Blue"];
+
+        function addColor() {
+            var userInput = prompt("Enter a color:");
+            
+            // Check if the color is not present in the array
+            if (colors.indexOf(userInput) === -1) {
+                colors.push(userInput);
+                alert(userInput + " has been added to the array.");
+            } else {
+                alert(userInput + " is already in the array.");
+            }
+        }
+    </script>
+    
+    <button onclick="addColor()">Add Color</button>
+</body>
+</html>

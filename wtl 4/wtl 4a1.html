@@ -1,0 +1,19 @@
+<html>
+<body>
+<form>
+<script>
+var i=0;
+function CallMe()
+{
+var color =['red','green','darkcyan','pink','yellow','white']
+document.bgColor =color[i];
+i++;
+if(i==color.length)
+i=0;
+}
+</script>
+</head>
+</body>
+<p><i>Click Button to change color</i> </p>
+<input type ="button" value="change color" onclick="CallMe()">
+</body>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Font and Background Color Changer</title>
+</head>
+<body>
+    <h1 id="heading">Sample Heading</h1>
+    <label for="fontColor">Font Color:</label>
+    <select id="fontColor">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+    </select>
+    <br>
+    <label for="bgColor">Background Color:</label>
+    <select id="bgColor">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+    </select>
+
+    <script>
+        const heading = document.getElementById("heading");
+        const fontColorSelect = document.getElementById("fontColor");
+        const bgColorSelect = document.getElementById("bgColor");
+
+        fontColorSelect.addEventListener("change", applyColors);
+        bgColorSelect.addEventListener("change", applyColors);
+
+        function applyColors() {
+            const selectedFontColor = fontColorSelect.value;
+            const selectedBgColor = bgColorSelect.value;
+
+            if (selectedFontColor !== selectedBgColor) {
+                heading.style.color = selectedFontColor;
+                heading.style.backgroundColor = selectedBgColor;
+            }
+        }
+    </script>
+</body>
+</html>

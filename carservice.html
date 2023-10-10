@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Service Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .car-models,
+        .accessories {
+            margin: 10px;
+        }
+
+        .car-models h2,
+        .accessories h2 {
+            margin-bottom: 5px;
+        }
+
+        .car-models ul,
+        .accessories ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .car-models li,
+        .accessories li {
+            margin-bottom: 5px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .submit-btn {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #555;
+        }
+
+        /* Additional styles for images */
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Additional styles for the accessories */
+        .accessories ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .accessories li {
+            text-align: center;
+            flex-basis: 30%;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Additional styles for images in accessories */
+        .accessories img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        /* Additional styles for the contact form */
+        .contact-form {
+            margin-top: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Car Service Center</h1>
+    </header>
+    <main>
+        <div class="car-models">
+            <h2>Car Models</h2>
+            <ul>
+                <li>
+                    <img src="car_model1.jpg" alt="Car Model 1">
+                    Model 1
+                </li>
+                <li>
+                    <img src="car_model2.jpg" alt="Car Model 2">
+                    Model 2
+                </li>
+                <li>
+                    <img src="car_model3.jpg" alt="Car Model 3">
+                    Model 3
+                </li>
+                <li>
+                    <img src="car_model4.jpg" alt="Car Model 4">
+                    Model 4
+                </li>
+            </ul>
+        </div>
+
+        <div class="accessories">
+            <h2>Accessories</h2>
+            <ul>
+                <li>
+                    <img src="accessory1.jpg" alt="Accessory 1">
+                    Accessory 1
+                </li>
+                <li>
+                    <img src="accessory2.jpg" alt="Accessory 2">
+                    Accessory 2
+                </li>
+                <li>
+                    <img src="accessory3.jpg" alt="Accessory 3">
+                    Accessory 3
+                </li>
+                <li>
+                    <img src="accessory4.jpg" alt="Accessory 4">
+                    Accessory 4
+                </li>
+                <li>
+                    <img src="accessory5.jpg" alt="Accessory 5">
+                    Accessory 5
+                </li>
+            </ul>
+        </div>
+
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <div class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <label for="contact-number">Contact Number:</label>
+                <input type="text" id="contact-number" placeholder="Enter your contact number">
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="Enter your email address">
+            </div>
+        </div>
+
+        <button class="submit-btn">Submit</button>
+    </main>
+</body>
+
+</html>

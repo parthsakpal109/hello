@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flower Shop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      color: #ff6b6b;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .flower-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+    }
+    .flower {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+    .flower:hover {
+      transform: translateY(-5px);
+    }
+    .flower img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .flower-name {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+    .flower-price {
+      margin-top: 5px;
+      color: #888;
+    }
+    #total-bill {
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    #customer-info {
+      text-align: center;
+      margin-top: 40px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .btn-add-to-cart {
+      padding: 8px 16px;
+      background-color: #ff6b6b;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    .btn-add-to-cart:hover {
+      background-color: #ff4f4f;
+    }
+    .btn-submit {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.2s ease;
+    }
+    .btn-submit:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Our Flower Shop</h1>
+
+  <div class="flower-container">
+    <div class="flower">
+      <img src="rose1.jpg" alt="Rose 1">
+      <div class="flower-name">Rose Type 1</div>
+      <div class="flower-price">$10</div>
+      <button class="btn-add-to-cart" onclick="addToBill(10)">Add to Cart</button>
+    </div>
+
+    <div class="flower">
+      <img src="rose2.jpg" alt="Rose 2">
+      <div class="flower-name">Rose Type 2</div>
+      <div class="flower-price">$12</div>
+      <button class="btn-add-to-cart" onclick="addToBill(12)">Add to Cart</button>
+    </div>
+
+    <div class="flower">
+      <img src="lily1.jpg" alt="Lily 1">
+      <div class="flower-name">Lily Type 1</div>
+      <div class="flower-price">$8</div>
+      <button class="btn-add-to-cart" onclick="addToBill(8)">Add to Cart</button>
+    </div>
+
+    <div class="flower">
+      <img src="lily2.jpg" alt="Lily 2">
+      <div class="flower-name">Lily Type 2</div>
+      <div class="flower-price">$9</div>
+      <button class="btn-add-to-cart" onclick="addToBill(9)">Add to Cart</button>
+    </div>
+
+    <div class="flower">
+      <img src="sunflower.jpg" alt="Sunflower">
+      <div class="flower-name">Sunflower</div>
+      <div class="flower-price">$6</div>
+      <button class="btn-add-to-cart" onclick="addToBill(6)">Add to Cart</button>
+    </div>
+  </div>
+
+  <div id="customer-info">
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <label for="contact-number">Contact Number:</label>
+    <input type="text" id="contact-number">
+    <br>
+    <button class="btn-submit" onclick="submitOrder()">Submit Order</button>
+  </div>
+
+  <div id="total-bill">Total Bill: $0</div>
+
+  <script>
+    let totalBill = 0;
+
+    function addToBill(price) {
+      totalBill += price;
+      document.getElementById("total-bill").textContent = `Total Bill: $${totalBill}`;
+    }
+
+    function submitOrder() {
+      const name = document.getElementById("name").value;
+      const contactNumber = document.getElementById("contact-number").value;
+
+      // Do something with the order data (e.g., send to server or display a confirmation message)
+      alert(`Thank you, ${name}! Your order has been submitted.`);
+    }
+  </script>
+</body>
+</html>

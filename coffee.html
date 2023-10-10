@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coffee Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 30px;
+        }
+
+        h1 {
+            color: #603c25;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9eee7;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #603c25;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #fff;
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #603c25;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #603c25;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #7e5141;
+        }
+
+        /* Styling for the coffee type options */
+        #coffee_type {
+            appearance: none;
+            -webkit-appearance: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background: url('dropdown_arrow.png') no-repeat right #fff;
+            background-size: 20px 20px;
+            transition: border-color 0.2s;
+        }
+
+        /* Additional styling for the coffee type options on focus */
+        #coffee_type:focus {
+            outline: none;
+            border-color: #603c25;
+        }
+
+        /* Sexy styling for coffee images */
+        .coffee-type-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .coffee-type-image:hover {
+            transform: scale(1.05);
+        }
+
+        /* Styling for name and contact fields */
+        #name,
+        #contact {
+            margin-bottom: 15px;
+            background-color: #f7f3f0;
+            border: 1px solid #603c25;
+            color: #603c25;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.2s;
+        }
+
+        #name:focus,
+        #contact:focus {
+            outline: none;
+            border-color: #7e5141;
+        }
+
+        /* Styling for coffee type prices */
+        .coffee-type-price {
+            display: inline-block;
+            margin-left: 10px;
+            color: #7e5141;
+        }
+    </style>
+</head>
+<body>
+    <h1>Coffee Order Form</h1>
+    <form action="/submit_order" method="post">
+        <!-- Name -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- Contact -->
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact" required>
+
+        <!-- Coffee Type: Espresso -->
+        <label for="espresso">
+            <img class="coffee-type-image" src="coffee_image_espresso.jpg" alt="Espresso">
+            <input type="radio" id="espresso" name="coffee_type" value="espresso" required>
+            <span>Espresso</span>
+            <span class="coffee-type-price">$2.50</span>
+        </label>
+
+        <!-- Coffee Type: Latte -->
+        <label for="latte">
+            <img class="coffee-type-image" src="coffee_image_latte.jpg" alt="Latte">
+            <input type="radio" id="latte" name="coffee_type" value="latte" required>
+            <span>Latte</span>
+            <span class="coffee-type-price">$3.00</span>
+        </label>
+
+        <!-- Coffee Type: Cappuccino -->
+        <label for="cappuccino">
+            <img class="coffee-type-image" src="coffee_image_cappuccino.jpg" alt="Cappuccino">
+            <input type="radio" id="cappuccino" name="coffee_type" value="cappuccino" required>
+            <span>Cappuccino</span>
+            <span class="coffee-type-price">$3.25</span>
+        </label>
+
+        <!-- Coffee Type: Americano -->
+        <label for="americano">
+            <img class="coffee-type-image" src="coffee_image_americano.jpg" alt="Americano">
+            <input type="radio" id="americano" name="coffee_type" value="americano" required>
+            <span>Americano</span>
+            <span class="coffee-type-price">$2.75</span>
+        </label>
+
+        <!-- Coffee Type: Mocha -->
+        <label for="mocha">
+            <img class="coffee-type-image" src="coffee_image_mocha.jpg" alt="Mocha">
+            <input type="radio" id="mocha" name="coffee_type" value="mocha" required>
+            <span>Mocha</span>
+            <span class="coffee-type-price">$3.50</span>
+        </label>
+
+        <!-- Other form fields... -->
+
+        <input type="submit" value="Place Order">
+    </form>
+</body>
+</html>
